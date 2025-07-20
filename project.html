@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Aniket Kamat</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(3, 3, 52);
+            color: #ffffff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #c1a7f7;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .projects-section {
+            margin-top: 30px;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #d4c4f1;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #c1a7f7;
+            padding-bottom: 5px;
+        }
+        .project-card {
+            background: rgba(137, 43, 226, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+        }
+        .project-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 15px auto;
+        }
+        .project-details {
+            text-align: left;
+            padding: 10px;
+            font-size: 1.1rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .project-details a {
+            color: aquamarine;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .project-details a:hover {
+            color: #85f7c1;
+        }
+        .navbar {
+            background-color:  #060668;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-end;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 20px;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links li a:hover {
+            color: #c1a7f7;
+        }
+        .nav-links li a.active {
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<header class="navbar">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="ContactMe.html">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="container">
+        <h1>My Projects</h1>
+        
+        <div class="projects-section">
+            <h2 class="section-title">Electronics Projects</h2>
+            <div class="project-card">
+                <h2>Air Quality Monitoring System</h2>
+                <img src="air-quality monitoring system.jpg" alt="Air Quality Monitoring System">
+                <div class="project-details">
+                    <h3>Components Used:</h3>
+                    <ul>
+                        <li>MQ135 Gas Sensor</li>
+                        <li>DHT11 Temperature & Humidity Sensor</li>
+                        <li>OLED Display</li>
+                        <li>Arduino Board</li>
+                        <li>Breadboard & Jumper Wires</li>
+                    </ul>
+                    <h3>Working:</h3>
+                    <p>The system uses an MQ135 sensor to detect air quality by measuring gas levels, while the DHT11 sensor records temperature and humidity. An Arduino processes the sensor data and displays real-time results on an OLED screen, categorizing air quality as Good, Poor, Very Bad, or Toxic.</p>
+                    <a href="https://github.com/AniketSoftwareEng/Air-Quality-Monitoring-System">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-section">
+            <h2 class="section-title">Computer Projects</h2>
+            <div class="project-card">
+                <h2>Online Driving School Management System</h2>
+                <img src="Screenshot 2024-11-07 160753.png" alt="Project Image">
+
+                <p>I built an online driving school management system to reduce paperwork for driving school owners.</p>
+                <h3>Features:</h3>
+                <ul>
+                    <li>Flexible schedules: Candidates can change their time slot, and the previous slot becomes available for others.</li>
+                    <li>Provision for candidates to apply for a learner’s license by themselves.</li>
+                </ul>
+                <h3>Technologies Used:</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Aniket Kamat</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(3, 3, 52);
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1000px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #c1a7f7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .text {
+            flex: 1;
+            font-size: 1.2rem;
+            text-align: left;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .highlight {
+            color: #85f7c1;
+            font-weight: bold;
+        }
+        .photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+            transition: transform 0.5s ease-in-out;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .photo:hover {
+            transform: scale(1.1);
+        }
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-links a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+        .social-links a img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Style updates for skills & projects */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.skills, ul.projects {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            flex-wrap: wrap; /* Adjusts for smaller screens */
+        }
+
+        ul.skills li, ul.projects li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #060668;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            margin-left: auto; /* Pushes nav items to the extreme right */
+        }
+        .nav-links li {
+            margin: 0 20px;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links li a:hover {
+            color: #c1a7f7;
+        }
+        .nav-links li a.active {
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body> <!-- Moved <body> to correct position -->
+    
+    <!-- Navbar -->
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="ContactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1>About Me</h1>
+            <div class="content">
+                <div class="text" id="text"></div>
+                <div class="photo">
+                    <img src="Profile-pic.jpg" alt="Aniket Kamat">
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/AniketSoftwareEng?tab=projects" target="_blank"><img src="github-logo.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/aniket-kamat-861b66253/" target="_blank"><img src="logo-linkedin-icon-4096.png" alt="LinkedIn"></a>
+                <a href="kamataniket78@gmail.com" target="_blank"><img src="gmail-icon-free-png.webp" alt="Email"></a>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        const textElement = document.getElementById("text");
+        const text = `
+            <p>Hi, I'm <b>Aniket Kamat</b>, a passionate Electronics and Computer Engineering student with a deep interest in technology, problem-solving, and innovation. I love building projects that bridge the gap between hardware and software, and I'm always exploring new ways to create impactful solutions.</p><br><br> 
+        `;
+
+        let words = text.split(" ");
+        let index = 0;
+
+        function displayText() {
+            if (index < words.length) {
+                textElement.innerHTML += words[index] + " ";
+                index++;
+                setTimeout(displayText, 50);
+            }
+        }
+        displayText();
+    </script>
+
+</body>
+</html>
